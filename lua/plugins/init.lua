@@ -34,4 +34,17 @@ return {
       },
     },
   },
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    event = "BufReadPost",
+    config = function()
+      require("treesitter-context").setup {
+        enable = true,
+        max_lines = 3, -- How many lines the context window can span
+        trim_scope = "outer",
+        mode = "cursor", -- Show context for the line where the cursor is
+        zindex = 20,
+      }
+    end,
+  },
 }
