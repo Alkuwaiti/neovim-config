@@ -22,3 +22,11 @@ end, { desc = "Open file in GitHub" })
 map("v", "<leader>gb", function()
   require("gitlinker").get_buf_range_url("v", { action_callback = require("gitlinker.actions").open_in_browser })
 end, { desc = "Open file in GitHub" })
+
+map("n", "<leader>cd", function()
+  local d = vim.diagnostic.get()
+  if d and d[1] then
+    vim.fn.setreg("+", d[1].message)
+    print("Copied: " .. d[1].message)
+  end
+end, { desc = "Copy diagnostic to clipboard" })

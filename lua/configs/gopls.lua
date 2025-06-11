@@ -1,4 +1,3 @@
--- lua/configs/gopls.lua
 return {
   settings = {
     gopls = {
@@ -10,4 +9,3 @@ return {
     },
   },
 }
-
