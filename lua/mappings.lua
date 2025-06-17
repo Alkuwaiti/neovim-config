@@ -30,3 +30,5 @@ map("n", "<leader>cd", function()
     print("Copied: " .. d[1].message)
   end
 end, { desc = "Copy diagnostic to clipboard" })
+
+map("n", "<leader>gs", ":Git<CR>", { noremap = true, silent = true })

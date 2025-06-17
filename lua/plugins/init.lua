@@ -66,4 +66,11 @@ return {
       }
     end,
   },
+  {
+    "tpope/vim-fugitive",
+    lazy = false, -- load immediately (optional)
+    config = function()
+      -- any fugitive-specific setup if you want (usually none needed)
+    end,
+  },
 }
