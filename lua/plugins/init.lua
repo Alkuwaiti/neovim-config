@@ -73,4 +73,24 @@ return {
       -- any fugitive-specific setup if you want (usually none needed)
     end,
   },
+  {
+    "windwp/nvim-ts-autotag",
+    event = "InsertEnter",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "html",
+        "javascript",
+        "typescript",
+        "tsx",
+        "vue",
+        "lua",
+      },
+    },
+  },
 }
