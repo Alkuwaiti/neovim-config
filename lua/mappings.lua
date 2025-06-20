@@ -32,3 +32,7 @@ map("n", "<leader>cd", function()
 end, { desc = "Copy diagnostic to clipboard" })
 
 map("n", "<leader>gs", ":Git<CR>", { noremap = true, silent = true })
+
+map("n", "<C-]>", "<C-i>", { desc = "Jump forward in jumplist" })
+
+map("n", "<leader>gd", ":Gvdiffsplit<CR>", { desc = "Git diff of current file" })
