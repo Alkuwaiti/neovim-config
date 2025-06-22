@@ -36,3 +36,9 @@ map("n", "<leader>gs", ":Git<CR>", { noremap = true, silent = true })
 map("n", "<C-]>", "<C-i>", { desc = "Jump forward in jumplist" })
 
 map("n", "<leader>gd", ":Gvdiffsplit<CR>", { desc = "Git diff of current file" })
+
+map("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down", silent = true })
+map("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up", silent = true })
+
+map("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move block down", silent = true })
+map("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move block up", silent = true })

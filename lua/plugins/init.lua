@@ -47,7 +47,7 @@ return {
       }
     end,
   },
-  {
+  { -- TODO: i don't think i use this anymore
     "ruifm/gitlinker.nvim",
     dependencies = "nvim-lua/plenary.nvim",
     config = function()
