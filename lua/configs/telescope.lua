@@ -1,6 +1,11 @@
 return {
   defaults = {
     -- optional default settings
+    file_ignore_patterns = {
+      "node_modules",
+      ".git/",
+      "dist/",
+    },
   },
   pickers = {
     find_files = {
@@ -13,4 +18,3 @@ return {
     },
   },
 }
-
