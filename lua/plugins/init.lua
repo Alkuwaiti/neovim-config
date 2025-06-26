@@ -6,7 +6,6 @@ return {
       require("conform").setup(require "configs.conform")
     end,
   },
-
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -99,6 +98,13 @@ return {
     config = function()
       vim.api.nvim_set_keymap("n", "j", "<Plug>(accelerated_jk_gj)", {})
       vim.api.nvim_set_keymap("n", "k", "<Plug>(accelerated_jk_gk)", {})
+    end,
+  },
+  {
+    "mfussenegger/nvim-jdtls",
+    ft = "java",
+    config = function()
+      require "configs.jdtls"
     end,
   },
 }

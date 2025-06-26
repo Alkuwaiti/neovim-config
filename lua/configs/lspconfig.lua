@@ -3,7 +3,7 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- List of servers
-local servers = { "html", "cssls", "gopls", "ts_ls", "terraformls", "jdtls", "sqls" }
+local servers = { "html", "cssls", "gopls", "ts_ls", "terraformls", "sqls" }
 
 -- Iterate and configure each
 for _, server in ipairs(servers) do
