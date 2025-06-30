@@ -27,6 +27,9 @@ return {
       filters = {
         dotfiles = false, -- This will show dotfiles like .terraform
       },
+      renderer = {
+        group_empty = true, -- This combines nested empty folders into one
+      },
       git = {
         enable = true,
         ignore = false, -- This ensures .gitignored files still show
@@ -89,6 +92,7 @@ return {
         "tsx",
         "vue",
         "lua",
+        "java",
       },
     },
   },
