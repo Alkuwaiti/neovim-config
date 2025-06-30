@@ -46,3 +46,7 @@ map("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move block up", silent = true })
 map("n", "<leader>dd", function()
   vim.diagnostic.open_float(nil, { focusable = true, border = "rounded", scope = "cursor" })
 end, { desc = "Show diagnostics in float" })
+
+map("n", "<leader>gB", function()
+  require("gitsigns").blame_line { full = true }
+end, { desc = "Git blame line" })
