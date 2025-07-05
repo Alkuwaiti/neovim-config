@@ -50,3 +50,10 @@ end, { desc = "Show diagnostics in float" })
 map("n", "<leader>gB", function()
   require("gitsigns").blame_line { full = true }
 end, { desc = "Git blame line" })
+
+map({ "i", "s" }, "<C-e>", function()
+  local ls = require "luasnip"
+  if ls.in_snippet() then
+    ls.unlink_current()
+  end
+end, { desc = "Exit snippet jump mode" })
