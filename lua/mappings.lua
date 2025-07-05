@@ -51,9 +51,9 @@ map("n", "<leader>gB", function()
   require("gitsigns").blame_line { full = true }
 end, { desc = "Git blame line" })
 
-map({ "i", "s" }, "<C-e>", function()
+vim.keymap.set({ "i", "s" }, "<C-e>", function()
   local ls = require "luasnip"
   if ls.in_snippet() then
     ls.unlink_current()
   end
-end, { desc = "Exit snippet jump mode" })
+end, { desc = "Exit LuaSnip snippet", silent = true })
