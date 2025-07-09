@@ -9,12 +9,3 @@ vim.api.nvim_create_autocmd("VimEnter", {
     end
   end,
 })
-
-vim.api.nvim_create_autocmd("InsertLeave", {
-  callback = function()
-    local ok, ls = pcall(require, "luasnip")
-    if ok and ls.in_snippet() then
-      ls.unlink_current()
-    end
-  end,
-})
