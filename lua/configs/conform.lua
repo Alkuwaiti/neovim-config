@@ -15,6 +15,7 @@ local options = {
     terraform = { "terraform_fmt" },
     java = { "google-java-format" },
     sql = { "sql_formatter" },
+    xml = { "xmlformatter" },
   },
 }
 
