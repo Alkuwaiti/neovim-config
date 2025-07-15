@@ -6,6 +6,7 @@ return {
       ".git/",
       "dist/",
     },
+    path_display = { "smart" },
   },
   pickers = {
     find_files = {
