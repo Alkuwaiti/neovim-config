@@ -2,6 +2,7 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
+-- compatibility with tmux
 map("n", "<C-h>", "<cmd> TmuxNavigateLeft<CR>", { desc = "Window left" })
 map("n", "<C-j>", "<cmd> TmuxNavigateDown<CR>", { desc = "Window down" })
 map("n", "<C-k>", "<cmd> TmuxNavigateUp<CR>", { desc = "Window up" })
@@ -51,9 +52,14 @@ map("n", "<leader>gB", function()
   require("gitsigns").blame_line { full = true }
 end, { desc = "Git blame line" })
 
-vim.keymap.set({ "i", "s" }, "<C-e>", function()
+map({ "i", "s" }, "<C-e>", function()
   local ls = require "luasnip"
   if ls.in_snippet() then
     ls.unlink_current()
   end
 end, { desc = "Exit LuaSnip snippet", silent = true })
+
+map("v", "<Tab>", ">gv", { desc = "Indent selection" })
+map("v", "<S-Tab>", "<gv", { desc = "Unindent selection" })
+
+map("n", "<leader><leader>", "<C-^>", { desc = "Switch to last buffer" })
