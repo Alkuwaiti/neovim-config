@@ -1,13 +1,20 @@
 require("nvchad.configs.lspconfig").defaults()
-
 local lspconfig = require "lspconfig"
 
 -- List of servers
-local servers = { "html", "cssls", "gopls", "ts_ls", "terraformls", "sqls" }
+local servers = { "html", "cssls", "gopls", "ts_ls", "terraformls", "sqls", "sourcekit" }
+
+local on_attach = require("nvchad.configs.lspconfig").on_attach
+local on_init = require("nvchad.configs.lspconfig").on_init
+local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 -- Iterate and configure each
 for _, server in ipairs(servers) do
-  local opts = {}
+  local opts = {
+    on_attach = on_attach,
+    on_init = on_init,
+    capabilities = capabilities,
+  }
 
   -- Try to require server-specific config
   local has_custom_opts, server_opts = pcall(require, "configs." .. server)
