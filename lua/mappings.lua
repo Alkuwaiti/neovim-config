@@ -59,7 +59,4 @@ map({ "i", "s" }, "<C-e>", function()
   end
 end, { desc = "Exit LuaSnip snippet", silent = true })
 
-map("v", "<Tab>", ">gv", { desc = "Indent selection" })
-map("v", "<S-Tab>", "<gv", { desc = "Unindent selection" })
-
 map("n", "<leader><leader>", "<C-^>", { desc = "Switch to last buffer" })
