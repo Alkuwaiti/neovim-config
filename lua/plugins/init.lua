@@ -111,4 +111,8 @@ return {
       require "configs.jdtls"
     end,
   },
+  {
+    "chaoren/vim-wordmotion",
+    lazy = false,
+  },
 }
