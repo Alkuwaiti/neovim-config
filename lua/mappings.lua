@@ -52,10 +52,16 @@ map("n", "<leader>gB", function()
   require("gitsigns").blame_line { full = true }
 end, { desc = "Git blame line" })
 
+local ls = require "luasnip"
+
 map({ "i", "s" }, "<C-e>", function()
-  local ls = require "luasnip"
   if ls.in_snippet() then
+    -- jump to the last node before exiting
+    if ls.jumpable(1) then
+      ls.jump(1)
+    end
     ls.unlink_current()
+    print "Exited snippet"
   end
 end, { desc = "Exit LuaSnip snippet", silent = true })
 
