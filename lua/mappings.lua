@@ -66,3 +66,5 @@ map({ "i", "s" }, "<C-e>", function()
 end, { desc = "Exit LuaSnip snippet", silent = true })
 
 map("n", "<leader><leader>", "<C-^>", { desc = "Switch to last buffer" })
+
+map("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Toggle Markdown Preview" })
