@@ -68,3 +68,7 @@ end, { desc = "Exit LuaSnip snippet", silent = true })
 map("n", "<leader><leader>", "<C-^>", { desc = "Switch to last buffer" })
 
 map("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Toggle Markdown Preview" })
+
+map("n", "<leader>bo", "<cmd>%bd|e#<CR>", {
+  desc = "Close all other buffers",
+})
