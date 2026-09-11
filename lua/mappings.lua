@@ -2,6 +2,8 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
+local builtin = require "telescope.builtin"
+
 -- compatibility with tmux
 map("n", "<C-h>", "<cmd> TmuxNavigateLeft<CR>", { desc = "Window left" })
 map("n", "<C-j>", "<cmd> TmuxNavigateDown<CR>", { desc = "Window down" })
@@ -72,3 +74,5 @@ map("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<CR>", { desc = "Toggle Markdo
 map("n", "<leader>bo", "<cmd>%bd|e#<CR>", {
   desc = "Close all other buffers",
 })
+
+map("n", "<leader>gc", builtin.git_commits, { desc = "Git commits" })
